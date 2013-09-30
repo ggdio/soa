@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://ggdio.com.br/estoque/domain/v1"
+		xmlns:tns="http://ggdio.com.br/estoque/domain/v1"
+		xmlns:usuarios="http://ggdio.com.br/usuarios/domain/v1">
+		
+		<import namespace="http://ggdio.com.br/usuarios/domain/v1" 
+				schemaLocation="usuarios_v1_0.xsd" />
+				
+		<annotation>
+			<documentation>
+				Schema canonico para o sistema de estoque, versão 1.0
+			</documentation>
+		</annotation>
+		
+		<complexType name="autor">
+			<sequence>
+				<element name="id" type="long" />
+				<element name="dataNascimento" type="date" />
+				<element name="nome" type="string" />
+				<element name="usuario" type="usuarios:usuario" />
+			</sequence>
+		</complexType>
+		
+</schema>
